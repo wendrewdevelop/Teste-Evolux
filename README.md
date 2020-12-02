@@ -20,6 +20,20 @@ flask db migrate
 flask db upgrade
 ```
 
+## Iniciar o container
+
+```sh
+sudo docker-compose up
+```
+O container irá rodar a partir do endereço: *http://0.0.0.0:5000/*
+
+## Endpoints da API
+
+- http://0.0.0.0:5000/mostrar -> Retorna os registros
+- http://0.0.0.0:5000/inserir -> Criar novos registros
+- http://0.0.0.0:5000/modificar/{int:id} -> Atualizar registros existentes
+- http://0.0.0.0:5000/deletar/{int:id} -> Deletar registros existentes
+
 ## Dependencias
 
 - Flask
@@ -27,11 +41,8 @@ flask db upgrade
 - flask-migrate
 - flask-marshmallow
 - marshmallow-sqlalchemy
+- Docker e Docker-compose
 
 ```sh
 pip install -r requirements.txt
 ```
-
-# TO-DO
-
-- [ ] Docker;
