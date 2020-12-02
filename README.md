@@ -34,6 +34,16 @@ O container irá rodar a partir do endereço: *http://0.0.0.0:5000/*
 - http://0.0.0.0:5000/modificar/{int:id} -> Atualizar registros existentes
 - http://0.0.0.0:5000/deletar/{int:id} -> Deletar registros existentes
 
+## Rodando testes
+
+- Os testes foram feitos usando a lib pytest. 
+
+Rode no terminal:
+
+```sh
+pytest
+```
+
 ## Dependencias
 
 - Flask
