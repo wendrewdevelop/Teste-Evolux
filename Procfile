@@ -1,1 +1,1 @@
-web: gunicorn app:app
+heroku container:push web
