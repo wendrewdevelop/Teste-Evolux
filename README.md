@@ -1,6 +1,6 @@
 # Teste Backend Evolux
 
-Repositório do teste para a vagade desenvolvedor backend, da empresa Evolux.
+Repositório do teste para a vaga de desenvolvedor backend, da empresa Evolux.
 
 ## Como rodar o projeto
 
