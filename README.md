@@ -27,12 +27,18 @@ sudo docker-compose up
 ```
 O container irá rodar a partir do endereço: *http://0.0.0.0:5000/*
 
-## Endpoints da API
+## Endpoints da API em desenvolvimento
 
 - http://0.0.0.0:5000/mostrar -> Retorna os registros
 - http://0.0.0.0:5000/inserir -> Criar novos registros
 - http://0.0.0.0:5000/modificar/{int:id} -> Atualizar registros existentes
 - http://0.0.0.0:5000/deletar/{int:id} -> Deletar registros existentes
+
+## Endpoints da API em produção
+- https://evolux.herokuapp.com/mostrar -> Retorna os registros
+- https://evolux.herokuapp.com/inserir -> Criar novos registros
+- https://evolux.herokuapp.com/modificar/{int:id} -> Atualizar registros existentes
+- https://evolux.herokuapp.com/deletar/{int:id} -> Deletar registros existentes 
 
 ## Rodando testes
 

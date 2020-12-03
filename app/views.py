@@ -21,6 +21,22 @@ def mostrar():
     return bs.jsonify(result), 200
 
 
+@bp_telecon.route('/detail/<int:id>', methods=['GET'])
+def detail(id):
+    """
+        Função que retorna um registro especifica 
+        do modelo Telecon() para a endpoint. 
+
+        Só o metodo GET é permitido.
+
+        Endpoint: /detail/<int:id>
+    """
+    bs = TeleconSchema()
+    result = Telecon.query.get(id)
+
+    return bs.jsonify(result), 200
+
+
 @bp_telecon.route('/deletar/<int:id>', methods=['GET'])
 def deletar(id):
     """
