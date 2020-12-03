@@ -55,7 +55,7 @@ pytest
 ## Dependencias
 
 - Flask
-- flask-sqlaclhemy
+- flask-sqlalchemy
 - flask-migrate
 - flask-marshmallow
 - marshmallow-sqlalchemy
