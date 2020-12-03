@@ -27,6 +27,20 @@ def test_verificando_listagem_dados_api():
     assert response.status_code == 200
 
 
+def test_verificando_listagem_registro_unico_api():
+    '''
+        Verificando se a rota /detail/<int:id> esta
+        acessivel, com base no codigo http retornado.
+    '''
+    app = create_app()
+    app.config['TESTING'] = True
+
+    with app.test_client() as client:
+        response = client.get('/detail/1')
+
+    assert response.status_code == 200
+
+
 def test_verificando_insercao_dados_api():
     '''
         Verifica se a rota de inserção de dados
