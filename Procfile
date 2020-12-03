@@ -1,1 +1,1 @@
-heroku container:push web
+web container:push web
