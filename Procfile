@@ -1,1 +1,1 @@
-web container:push web
+web docker-compose up
