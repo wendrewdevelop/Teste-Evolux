@@ -9,6 +9,10 @@ def configure(app):
 
 
 class TeleconSchema(ma.SQLAlchemyAutoSchema):
+    '''
+        Classe responsavel por serializar o modelo
+        Telecon().
+    '''
     class Meta:
         model = Telecon
         

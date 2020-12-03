@@ -5,6 +5,11 @@ from .serializer import configure as config_ma
 
 
 def create_app():
+    '''
+        Função principal da aplicação,
+        responsavel por gerenciar todas
+        as dependencias e importações.
+    '''
     app = Flask(__name__)
     
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///evolux.db'

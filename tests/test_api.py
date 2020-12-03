@@ -5,10 +5,19 @@ from app.model import db
 
 
 def test_create_app_deve_retornar_um_app_flask():
-        assert isinstance(create_app(), Flask)
+    '''
+        Verificando se a instancia da nossa
+        aplicação esta sendo iniciada corretamente.
+    '''
+    assert isinstance(create_app(), Flask)
 
 
 def test_verificando_listagem_dados_api():
+    '''
+        Verificando se a rota /mostrar esta
+        acessivel, com base no codigo http 
+        retornado.
+    '''
     app = create_app()
     app.config['TESTING'] = True
 
@@ -19,6 +28,11 @@ def test_verificando_listagem_dados_api():
 
 
 def test_verificando_insercao_dados_api():
+    '''
+        Verifica se a rota de inserção de dados
+        esta acessivel e inserindo dados corretamente
+        com base no código http retornado.
+    '''
     app = create_app()
     app.config['TESTING'] = True
 
@@ -37,6 +51,11 @@ def test_verificando_insercao_dados_api():
 
 
 def test_verificando_update_dados_api():
+    '''
+        Teste que verifica se a endpoint para
+        atualizar o registro requisitado esta
+        acessivel e agindo conforme desejado.
+    '''
     app = create_app()
     app.config['TESTING'] = True
 
@@ -55,6 +74,10 @@ def test_verificando_update_dados_api():
 
 
 def test_verificando_delete_dados_api():
+    '''
+        Testando a exclusão de um registro,
+        com base no id passado.
+    '''
     app = create_app()
     app.config['TESTING'] = True
 

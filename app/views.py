@@ -8,7 +8,12 @@ bp_telecon = Blueprint('telecon', __name__)
 @bp_telecon.route('/mostrar', methods=['GET'])
 def mostrar():
     """
-        docstring
+        Função que retorna os registros do modelo Telecon()
+        para a endpoint. 
+
+        Só o metodo GET é permitido.
+
+        Endpoint: /mostrar
     """
     bs = TeleconSchema(many=True)
     result = Telecon.query.all()
@@ -19,7 +24,14 @@ def mostrar():
 @bp_telecon.route('/deletar/<int:id>', methods=['GET'])
 def deletar(id):
     """
-        docstring
+        Função responsavel por excluir um registro da base
+        de dados, com base no identificador passado como 
+        parametro na URL. 
+
+        Só o metodo GET é permitido.
+
+        Endpoint: /deletar/<int:id>
+        Identiicador: id
     """
     Telecon.query.filter(Telecon.id == id).delete()
     current_app.db.session.commit()
@@ -30,7 +42,13 @@ def deletar(id):
 @bp_telecon.route('/modificar/<int:id>', methods=['POST'])
 def modificar(id):
     """
-        docstring
+        Função responsavel por atualizar os dados do registro
+        com base no identificador fornecido pelo usuario. 
+
+        O metodo POST é utilizado nessa rota.
+
+        Endpoint: /modificar/<int:id>
+        Identificador: id
     """
     ts = TeleconSchema()
 
@@ -44,7 +62,12 @@ def modificar(id):
 @bp_telecon.route('/inserir', methods=['POST'])
 def inserir():
     """
-        docstring
+        Função que gerencia a inserção de dados
+        na tabela e retorna o registro inserido.
+
+        O metodo POST é utilizado nessa rota.
+
+        Endpoint: /inserir
     """
     ts = TeleconSchema()
 
